@@ -1,5 +1,5 @@
 # simplegml
-CRUD Responsive, en Laravel y VueJs con API-REST
+CRUD Responsive, en Laravel y VueJs con API-REST, desarrollada en ZorinOS(Linux)
 ## Laravel 7
     - composer create-project --prefer-dist laravel/laravel my-crud
     - config .env
@@ -12,3 +12,5 @@ CRUD Responsive, en Laravel y VueJs con API-REST
         DB_PASSWORD=****
     ```
 ## VueJS
+    - vue-router    [3.3.7]
+    - vue-axios     [3.5.2]
