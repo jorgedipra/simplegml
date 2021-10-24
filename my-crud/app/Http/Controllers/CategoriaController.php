@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Categoria;
 use Illuminate\Http\Request;
+use App\Http\Resources\CategoriaCollection;
 
 class CategoriaController extends Controller
 {
@@ -14,72 +15,43 @@ class CategoriaController extends Controller
      */
     public function index()
     {
-        //
+        $categoria = Categoria::all()->toArray();
+        return array_reverse($categoria);
+    }
+    // add Categoria
+    public function add(Request $request)
+    {
+        $categoria = new Categoria([
+            'title' => $request->input('title'),
+            'description' => $request->input('description')
+        ]);
+        $categoria->save();
+ 
+        return response()->json('The Categoria successfully added');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    // edit categoria
+    public function edit($id)
     {
-        //
+        $categoria = Categoria::find($id);
+        return response()->json($categoria);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    // update Categoria
+    public function update($id, Request $request)
     {
-        //
+        $categoria = Categoria::find($id);
+        $categoria->update($request->all());
+ 
+        return response()->json('The Categoria successfully updated');
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Categoria  $categoria
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Categoria $categoria)
+ 
+    // delete Categoria
+    public function delete($id)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Categoria  $categoria
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Categoria $categoria)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Categoria  $categoria
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Categoria $categoria)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Categoria  $categoria
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Categoria $categoria)
-    {
-        //
+        $categoria = Categoria::find($id);
+        $categoria->delete();
+ 
+        return response()->json('The Categoria successfully deleted');
     }
 }
