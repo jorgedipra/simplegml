@@ -11,6 +11,13 @@ CRUD Responsive, en Laravel y VueJs con API-REST, desarrollada en ZorinOS(Linux)
         DB_USERNAME=root
         DB_PASSWORD=****
     ```
+    - migration: Tablas Usuarios, Categorias 
+    ```
+        > php artisan make:model Categoria -mcr
+        > php artisan make:model Usuarios -mcr
+        > php artisan migrate
+    ```
+
 ## VueJS
     - vue-router    [3.3.7]
     - vue-axios     [3.5.2]
