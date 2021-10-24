@@ -14,72 +14,50 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        //
+        $usuarios = Usuarios::all()->toArray();
+        return array_reverse($usuarios);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    // add Usuarios
+    public function add(Request $request)
     {
-        //
+        $usuarios = new Usuarios([
+            'name' => $request->input('name'),
+            'last_name' => $request->input('last_name'),
+            'last_name' => $request->input('document'),
+            'last_name' => $request->input('email'),
+            'last_name' => $request->input('country'),
+            'last_name' => $request->input('adress'),
+            'last_name' => $request->input('telephone')
+        ]);
+        $usuarios->save();
+ 
+        return response()->json('The Usuarios successfully added');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    // edit Usuarios
+    public function edit($id)
     {
-        //
+        $usuarios = Usuarios::find($id);
+        return response()->json($usuarios);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Usuarios  $usuarios
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Usuarios $usuarios)
-    {
-        //
-    }
+     // update Usuarios
+     public function update($id, Request $request)
+     {
+         $usuarios = Usuarios::find($id);
+         $usuarios->update($request->all());
+  
+         return response()->json('The Usuarios successfully updated');
+     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Usuarios  $usuarios
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Usuarios $usuarios)
+    // delete Usuarios
+    public function delete($id)
     {
-        //
+        $usuarios = Usuarios::find($id);
+        $usuarios->delete();
+ 
+        return response()->json('The Usuarios successfully deleted');
     }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Usuarios  $usuarios
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Usuarios $usuarios)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Usuarios  $usuarios
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Usuarios $usuarios)
-    {
-        //
-    }
+   
 }
