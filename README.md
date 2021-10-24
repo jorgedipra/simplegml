@@ -19,5 +19,6 @@ CRUD Responsive, en Laravel y VueJs con API-REST, desarrollada en ZorinOS(Linux)
     ```
 
 ## VueJS
+    - vue           [2.6.14]
     - vue-router    [3.3.7]
     - vue-axios     [3.5.2]
