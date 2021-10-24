@@ -2,9 +2,9 @@ import AllCategoria from './components/AllCategoria.vue';
 import AddCategoria from './components/AddCategoria.vue';
 import EditCategoria from './components/EditCategoria.vue';
 
-import AllUsuarios from './components/AllUsuarios.vue';
-import AddUsuarios from './components/AddUsuarios.vue';
-import EditUsuarios from './components/EditUsuarios.vue';
+import AllUsuarios from './components/AllUsuario.vue';
+import AddUsuarios from './components/AddUsuario.vue';
+import EditUsuarios from './components/EditUsuario.vue';
  
 export const routes = [
     {
