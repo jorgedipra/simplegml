@@ -1,7 +1,7 @@
 # simplegml
 CRUD Responsive, en Laravel y VueJs con API-REST, desarrollada en ZorinOS(Linux)
 ## Laravel 7
-    - composer create-project --prefer-dist laravel/laravel my-crud
+    - composer create-project --prefer-dist laravel/laravel:^7.0 my-crud
     - config .env
     ```
         DB_CONNECTION=mysql 
