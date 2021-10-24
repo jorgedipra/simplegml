@@ -24,11 +24,11 @@ class UsuariosController extends Controller
         $usuarios = new Usuarios([
             'name' => $request->input('name'),
             'last_name' => $request->input('last_name'),
-            'last_name' => $request->input('document'),
-            'last_name' => $request->input('email'),
-            'last_name' => $request->input('country'),
-            'last_name' => $request->input('adress'),
-            'last_name' => $request->input('telephone')
+            'document' => $request->input('document'),
+            'email' => $request->input('email'),
+            'country' => $request->input('country'),
+            'adress' => $request->input('adress'),
+            'telephone' => $request->input('telephone')
         ]);
         $usuarios->save();
  

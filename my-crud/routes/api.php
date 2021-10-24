@@ -9,15 +9,15 @@ Route::get('categoria', 'CategoriaController@index');
 Route::get('usuarios', 'UsuariosController@index');
 
 Route::group(['prefix' => 'Categoria'], function () {
-    Route::post('add', 'CategoriaController@add');
-    Route::get('edit/{id}', 'CategoriaController@edit');
-    Route::post('update/{id}', 'CategoriaController@update');
-    Route::delete('delete/{id}', 'CategoriaController@delete');
+    Route::post('addCat', 'CategoriaController@add');
+    Route::get('editCat/{id}', 'CategoriaController@edit');
+    Route::post('updateCat/{id}', 'CategoriaController@update');
+    Route::delete('deleteCat/{id}', 'CategoriaController@delete');
 });
 
 Route::group(['prefix' => 'usuarios'], function () {
-    Route::post('add', 'UsuariosController@add');
-    Route::get('edit/{id}', 'UsuariosController@edit');
-    Route::post('update/{id}', 'UsuariosController@update');
-    Route::delete('delete/{id}', 'UsuariosController@delete');
+    Route::post('addUse', 'UsuariosController@add');
+    Route::get('editUse/{id}', 'UsuariosController@edit');
+    Route::post('updateUse/{id}', 'UsuariosController@update');
+    Route::delete('deleteUse/{id}', 'UsuariosController@delete');
 });
