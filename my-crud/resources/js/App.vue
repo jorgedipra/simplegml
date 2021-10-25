@@ -8,6 +8,8 @@
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav">
                     <router-link to="/" class="nav-item nav-link">Home</router-link>
+                    <router-link to="/Cat" class="nav-item nav-link">Categoria</router-link>
+                    <router-link to="/Use" class="nav-item nav-link">Usuarios</router-link>
                     <router-link to="/addCat" class="nav-item nav-link">Add Categoria</router-link>
                     <router-link to="/addUse" class="nav-item nav-link">Add Usuario</router-link>
                 </div>

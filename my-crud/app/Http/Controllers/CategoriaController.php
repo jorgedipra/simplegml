@@ -18,6 +18,7 @@ class CategoriaController extends Controller
         $categoria = Categoria::all()->toArray();
         return array_reverse($categoria);
     }
+
     // add Categoria
     public function add(Request $request)
     {

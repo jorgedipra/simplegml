@@ -9,7 +9,7 @@ import EditUsuarios from './components/EditUsuario.vue';
 export const routes = [
     {
         name: 'homeCat',
-        path: '/cat',
+        path: '/Cat',
         component: AllCategoria
     },
     {

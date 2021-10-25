@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 
  
  
-Route::get('categoria', 'CategoriaController@index');
-Route::get('usuarios', 'UsuariosController@index');
+Route::get('Cat', 'CategoriaController@index');
+Route::get('Use', 'UsuariosController@index');
 
 Route::group(['prefix' => 'Categoria'], function () {
     Route::post('addCat', 'CategoriaController@add');

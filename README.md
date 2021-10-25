@@ -16,6 +16,7 @@ CRUD Responsive, en Laravel y VueJs con API-REST, desarrollada en ZorinOS(Linux)
         > php artisan make:model Categoria -mcr
         > php artisan make:model Usuarios -mcr
         > php artisan migrate
+        > php artisan db:seed
     ```
 
 ## VueJS
